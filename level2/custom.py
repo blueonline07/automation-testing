@@ -14,10 +14,10 @@ action = {
 
 
 class CustomTest(unittest.TestCase):
-    def __init__(self, method_name = 'test_case',url = "",  data = [], output = None):
-        super(CustomTest, self).__init__(method_name)
+    def __init__(self, url = "", steps = [], output = None):
+        super(CustomTest, self).__init__('test_case')
         self.url = url
-        self.data = data
+        self.steps = steps
         self.output = output
 
     def setUp(self, data = None):
@@ -31,18 +31,17 @@ class CustomTest(unittest.TestCase):
     def test_case(self):
         driver = self.driver
         driver.get("https://ecommerce-playground.lambdatest.io")
-        driver.get("https://ecommerce-playground.lambdatest.io/index.php?route=account/login")
-
-        for data in self.data:
-            tag = data['tag']
-            selector = data['selector']
-            d = data['data']
-            ele = driver.find_element(By.XPATH, "//{tag}[@{selector}='{d}']")
-            print(ele)
-            ac = action[data['action']]
-
-
-        driver.find_element_by_xpath("//input[@value='Login']").click()
+        driver.get(self.url)
+        for step in self.steps:
+            xpath = step['xpath']
+            data = step['data']
+            type_ = step['type']
+            if type_ == 'button':
+                driver.find_element_by_xpath(xpath).click()
+            else:
+                driver.find_element(By.XPATH, xpath).send_keys(data)
+        print(driver.find_element_by_xpath(self.output['xpath']).text)
+        self.assertEqual(driver.find_element_by_xpath(self.output['xpath']).text, self.output['value'])
         driver.close()
     
     def is_element_present(self, how, what):

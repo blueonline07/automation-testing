@@ -7,7 +7,7 @@ import unittest, time
 
 
 class EATest(unittest.TestCase):
-    def __init__(self, method_name='runTest', data=None, output=None):
+    def __init__(self, method_name='test_case', data=None, output=None):
         super(EATest, self).__init__(method_name)
         self.email = data["email"]
         self.password = data["password"]
