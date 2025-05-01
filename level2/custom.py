@@ -1,22 +1,21 @@
 # -*- coding: utf-8 -*-
+import time
+
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.common.exceptions import NoAlertPresentException
 from selenium.webdriver.common.by import By
 import unittest
 
-
-action = {
-    "send_keys": lambda x: x.send_keys,
-    "click": lambda x: x.click
-}
-
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 class CustomTest(unittest.TestCase):
-    def __init__(self, url = "", steps = [], output = None):
+    def __init__(self, steps=None, output = None):
         super(CustomTest, self).__init__('test_case')
-        self.url = url
+        if steps is None:
+            steps = []
         self.steps = steps
         self.output = output
 
@@ -31,17 +30,28 @@ class CustomTest(unittest.TestCase):
     def test_case(self):
         driver = self.driver
         driver.get("https://ecommerce-playground.lambdatest.io")
-        driver.get(self.url)
         for step in self.steps:
-            xpath = step['xpath']
-            data = step['data']
             type_ = step['type']
             if type_ == 'button':
-                driver.find_element_by_xpath(xpath).click()
-            else:
-                driver.find_element(By.XPATH, xpath).send_keys(data)
-        print(driver.find_element_by_xpath(self.output['xpath']).text)
-        self.assertEqual(driver.find_element_by_xpath(self.output['xpath']).text, self.output['value'])
+                try:
+                    button = WebDriverWait(driver, 5).until(
+                        EC.element_to_be_clickable((By.XPATH, step['xpath']))
+                    )
+                    button.click()
+                except TimeoutException:
+                    continue
+            elif type_ == 'select':
+                dropdown = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.XPATH, step['xpath'])))
+                Select(dropdown).select_by_visible_text(step['data'])
+            elif type_ == 'text':
+                text_field = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.XPATH, step['xpath'])))
+                data = step['data']
+                text_field.clear()
+                text_field.send_keys(data)
+
+
+        out_ele = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.XPATH, self.output['xpath'])))
+        self.assertEqual(out_ele.text, self.output['value'])
         driver.close()
     
     def is_element_present(self, how, what):
