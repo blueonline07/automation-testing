@@ -1,6 +1,6 @@
 import unittest
 import pandas as pd
-from eatest import EATest
+from actest import ACTest
 
 
 def loadsuite(test_cls, data_source: str):
@@ -12,7 +12,6 @@ def loadsuite(test_cls, data_source: str):
     return suite
 
 if __name__ == "__main__":
-    EASuite = loadsuite(EATest, 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQMlrtlEly7hMK1eLYPMp-vHPAond1KIeAtTIWwp6mu4Z9hWdCaix_SITrQfzI5xnMvpbru9DnGSwD9/pub?gid=1971721181&single=true&output=csv')
+    ACSuite = loadsuite(ACTest, 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQMlrtlEly7hMK1eLYPMp-vHPAond1KIeAtTIWwp6mu4Z9hWdCaix_SITrQfzI5xnMvpbru9DnGSwD9/pub?gid=2008912901&single=true&output=csv')
     runner = unittest.TextTestRunner()
-
-    runner.run(EASuite)
+    runner.run(ACSuite)

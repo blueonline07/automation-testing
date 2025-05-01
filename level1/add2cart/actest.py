@@ -1,22 +1,21 @@
 # -*- coding: utf-8 -*-
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time
 
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
-class EATest(unittest.TestCase):
+
+class ACTest(unittest.TestCase):
     def __init__(self, method_name='test_case', data=None):
-        super(EATest, self).__init__(method_name)
-        self.email = data["email"]
-        self.password = data["password"]
-        self.firstname = data["firstname"]
-        self.lastname = data["lastname"]
-        self.phone = data["phone"]
-        self.updated_email = data["updated_email"]
-        self.out_xpath = data["out_xpath"]
-        self.out_value = data["out_value"]
+        super(ACTest, self).__init__(method_name)
+        self.name = data['name']
+        self.out_xpath = data['out_xpath']
+        self.out_value = data['out_value']
 
     def setUp(self, data=None):
         self.driver = webdriver.Chrome()
@@ -28,25 +27,13 @@ class EATest(unittest.TestCase):
     def test_case(self):
         driver = self.driver
         driver.get("https://ecommerce-playground.lambdatest.io")
-        driver.get("https://ecommerce-playground.lambdatest.io/index.php?route=account/login")
-        driver.find_element_by_name("email").send_keys(self.email)
-        driver.find_element_by_name("password").send_keys(self.password)
-        driver.find_element_by_xpath("//input[@value='Login']").click()
-        driver.get("https://ecommerce-playground.lambdatest.io/index.php?route=account/account")
-        driver.get("https://ecommerce-playground.lambdatest.io/index.php?route=account/edit")
-
-        driver.find_element_by_id("input-firstname").clear()
-        driver.find_element_by_id("input-firstname").send_keys(self.firstname)
-        driver.find_element_by_id("input-lastname").clear()
-        driver.find_element_by_id("input-lastname").send_keys(self.lastname)
-
-        driver.find_element_by_id("input-email").clear()
-        driver.find_element_by_id("input-email").send_keys(self.updated_email)
-        driver.find_element_by_id("input-telephone").clear()
-        driver.find_element_by_id("input-telephone").send_keys(self.phone)
-
-        driver.find_element_by_xpath("//input[@value='Continue']").click()
-        res = driver.find_element_by_xpath(self.out_xpath)
+        driver.find_element_by_xpath('//*[@id="search"]/div[1]/div[1]/div[2]/input').send_keys(self.name)
+        driver.find_element_by_xpath('//*[@id="search"]/div[2]/button').click()
+        WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="entry_212469"]/div/div[1]'))).click()
+        add = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.XPATH, '//*[@id="entry_216842"]/button')))
+        if add.text == 'ADD TO CART':
+            add.click()
+        res = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.XPATH, self.out_xpath)))
         self.assertEqual(res.text, self.out_value)
         driver.close()
 

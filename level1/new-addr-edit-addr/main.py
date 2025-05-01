@@ -11,23 +11,7 @@ def loadsuite(test_cls, data_source: str):
     df = df.fillna("")
     suite = unittest.TestSuite()
     for row in df.itertuples():
-        data = {
-            "email":row[1],
-            "password":row[2],
-            "firstname":row[3],
-            "lastname":row[4],
-            "address":row[5],
-            "city":row[6],
-            "postcode": row[7],
-            "country":row[8],
-            "zone":row[9],
-        }
-        output = {
-            "class_":row[10],
-            "text_":row[11]
-        }
-        suite.addTest(test_cls("test_case", data, output))
-
+        suite.addTest(test_cls("test_case", row._asdict()))
     return suite
 
 if __name__ == "__main__":

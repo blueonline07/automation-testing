@@ -3,12 +3,10 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
-import unittest, time
-
-
+import unittest
 
 class NATest(unittest.TestCase):
-    def __init__(self, method_name = 'test_case', data = None, output = None):
+    def __init__(self, method_name = 'test_case', data = None):
         super(NATest, self).__init__(method_name)
         self.email = data["email"]
         self.password = data["password"]
@@ -19,7 +17,8 @@ class NATest(unittest.TestCase):
         self.postcode = data["postcode"]
         self.country = data["country"]
         self.zone = data["zone"]
-        self.output = output
+        self.out_xpath = data["out_xpath"]
+        self.out_value = data["out_value"]
 
     def setUp(self, data = None):
         self.driver = webdriver.Chrome()
@@ -44,17 +43,13 @@ class NATest(unittest.TestCase):
         driver.find_element_by_id("input-city").send_keys(self.city)
         driver.find_element_by_id("input-postcode").send_keys(self.postcode)
 
-        driver.find_element_by_id("input-country").click()
-        time.sleep(1)
         Select(driver.find_element_by_id("input-country")).select_by_visible_text(self.country)
-        driver.find_element_by_id("input-zone").click()
-        time.sleep(1)
         Select(driver.find_element_by_id("input-zone")).select_by_visible_text(self.zone)
 
         driver.find_element_by_xpath("//input[@value='Continue']").click()
 
-        res = driver.find_element_by_class_name(self.output["class_"])
-        self.assertEqual(res.text, self.output["text_"])
+        res = driver.find_element_by_xpath(self.out_xpath)
+        self.assertEqual(res.text, self.out_value)
         driver.close()
     
     def is_element_present(self, how, what):
