@@ -1,0 +1,8 @@
+firstname,lastname,address,city,state,postcode,country,phone,email,dob,password,output
+John,Doe,123 Main Street,New York,New York,10001,United States of America (the),5551234567,1valid@example.com,1990-01-01,Valid123!,success
+Jane,Smith,456 Oak Avenue,Los Angeles,California,90001,United States of America (the),5559876543,1valid@example.com,1985-05-12,Asdf1234!,failed
+Michael,Johnson,789 Pine Road,Chicago,Illinois,60601,United States of America (the),5556789012,invalid@example,1978-08-23,Qwerty!234,failed
+Öö’Üü,Williams,321 Cedar Lane,Houston,Texas,77001,United States of America (the),5553456789,emily.williams@example.com,1992-11-15,PassWord!56,failed
+David,Brown,654 Maple Street,HCMC,Arizona,85001,Viet Nam,5552345678,david.brown@example.com,1988-03-09,Dav!dB123,success
+Olivia,Jones,987 Birch Boulevard,Philadelphia,Pennsylvania,19101,United States of America (the),5552345679,,1995-07-21,,failed
+James,Miller,135 Spruce Drive,San Antonio,Texas,78201,United States of America (the),5555678901,2valid@example.com,1982-02-28,12345,failed

@@ -1,0 +1,7 @@
+# Browser automation requirements
+selenium>=4.0.0
+webdriver-manager>=3.8.0
+pandas>=1.3.0
+
+# Optional: For better browser management
+requests>=2.25.0

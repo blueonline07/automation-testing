@@ -1,0 +1,94 @@
+1756280105405	geckodriver	INFO	Listening on 127.0.0.1:57389
+1756280106939	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/opt/homebrew/bin/fire ... "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/p3/0h28pyl51b12d6vsdp5xqssh0000gn/T/rust_mozprofileBT4H3p"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1756280107858	Marionette	INFO	Marionette enabled
+1756280108204	Marionette	INFO	Listening on port 57401
+Read port: 57401
+1756280108358	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4200."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4200."
+1756280113520	Marionette	INFO	Stopped listening on port 57401
+console.error: "Failed to fetch https://ads.mozilla.org/v1/delete_user:" "NetworkError when attempting to fetch resource."
+console.warn: TopSitesFeed: Failed to fetch data from MARS server: NetworkError when attempting to fetch resource.
+1756280114004	geckodriver	INFO	Listening on 127.0.0.1:57416
+1756280115253	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/opt/homebrew/bin/fire ... "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/p3/0h28pyl51b12d6vsdp5xqssh0000gn/T/rust_mozprofilebQH1sq"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1756280115698	Marionette	INFO	Marionette enabled
+1756280115896	Marionette	INFO	Listening on port 57427
+Read port: 57427
+1756280116099	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4200."
+1756280122893	Marionette	INFO	Stopped listening on port 57427
+console.error: "Failed to fetch https://ads.mozilla.org/v1/delete_user:" "NetworkError when attempting to fetch resource."
+console.warn: TopSitesFeed: Failed to fetch data from MARS server: NetworkError when attempting to fetch resource.
+1756280123369	geckodriver	INFO	Listening on 127.0.0.1:57446
+1756280124474	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/opt/homebrew/bin/fire ... "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/p3/0h28pyl51b12d6vsdp5xqssh0000gn/T/rust_mozprofilemWZ7Zo"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1756280124861	Marionette	INFO	Marionette enabled
+1756280125069	Marionette	INFO	Listening on port 57457
+Read port: 57457
+1756280125248	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4200."
+1756280130232	Marionette	INFO	Stopped listening on port 57457
+console.error: "Failed to fetch https://ads.mozilla.org/v1/delete_user:" "NetworkError when attempting to fetch resource."
+console.warn: TopSitesFeed: Failed to fetch data from MARS server: NetworkError when attempting to fetch resource.
+1756280130666	geckodriver	INFO	Listening on 127.0.0.1:57475
+1756280131772	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/opt/homebrew/bin/fire ... "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/p3/0h28pyl51b12d6vsdp5xqssh0000gn/T/rust_mozprofileGsL3pQ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1756280132171	Marionette	INFO	Marionette enabled
+1756280132378	Marionette	INFO	Listening on port 57486
+Read port: 57486
+1756280132561	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4200."
+1756280137613	Marionette	INFO	Stopped listening on port 57486
+console.error: "Failed to fetch https://ads.mozilla.org/v1/delete_user:" "NetworkError when attempting to fetch resource."
+console.warn: TopSitesFeed: Failed to fetch data from MARS server: NetworkError when attempting to fetch resource.
+1756280138080	geckodriver	INFO	Listening on 127.0.0.1:57508
+1756280139182	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/opt/homebrew/bin/fire ... "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/p3/0h28pyl51b12d6vsdp5xqssh0000gn/T/rust_mozprofilelftWqG"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1756280139577	Marionette	INFO	Marionette enabled
+1756280139783	Marionette	INFO	Listening on port 57519
+Read port: 57519
+1756280139950	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4200."
+console.warn: FormAutofillSection: isRecordCreatable: Country not supported: VN
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4200."
+1756280144895	Marionette	INFO	Stopped listening on port 57519
+console.error: "Failed to fetch https://ads.mozilla.org/v1/delete_user:" "NetworkError when attempting to fetch resource."
+console.warn: TopSitesFeed: Failed to fetch data from MARS server: NetworkError when attempting to fetch resource.
+1756280145355	geckodriver	INFO	Listening on 127.0.0.1:57537
+1756280146457	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/opt/homebrew/bin/fire ... "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/p3/0h28pyl51b12d6vsdp5xqssh0000gn/T/rust_mozprofileJrN7sx"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1756280146853	Marionette	INFO	Marionette enabled
+1756280147064	Marionette	INFO	Listening on port 57548
+Read port: 57548
+1756280147260	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4200."
+1756280152230	Marionette	INFO	Stopped listening on port 57548
+console.error: "Failed to fetch https://ads.mozilla.org/v1/delete_user:" "NetworkError when attempting to fetch resource."
+console.warn: TopSitesFeed: Failed to fetch data from MARS server: NetworkError when attempting to fetch resource.
+1756280152725	geckodriver	INFO	Listening on 127.0.0.1:57569
+1756280153838	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/opt/homebrew/bin/fire ... "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/p3/0h28pyl51b12d6vsdp5xqssh0000gn/T/rust_mozprofileMnQZh7"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1756280154246	Marionette	INFO	Marionette enabled
+1756280154597	Marionette	INFO	Listening on port 57589
+Read port: 57589
+1756280154752	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:4200."
+1756280159632	Marionette	INFO	Stopped listening on port 57589
+console.error: "Failed to fetch https://ads.mozilla.org/v1/delete_user:" "NetworkError when attempting to fetch resource."
+console.warn: TopSitesFeed: Failed to fetch data from MARS server: NetworkError when attempting to fetch resource.
